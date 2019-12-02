@@ -6,6 +6,9 @@ import carMiddle from '../static/carMiddle.png';
 import carLeft from '../static/carLeft.png';
 import carRight from '../static/carRight.png';
 import styled from 'styled-components';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
 
 const LandingPage = props => {
   const Wrapper = styled.div`
@@ -19,6 +22,7 @@ const LandingPage = props => {
     width: 100vw;
     height: 100vh;
   `;
+
   const ImageBottom = styled.div`
     display: flex;
   `;
