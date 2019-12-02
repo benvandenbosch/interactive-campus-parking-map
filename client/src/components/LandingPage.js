@@ -15,103 +15,111 @@ const LandingPage = props => {
     margin-top: -1%;
   `;
 
-  const Landingpage = styled.section`
+  /*const Landingpage = styled.section`
     padding: 0;
     background: #5e1a54;
     overflow-x: hidden;
     width: 100vw;
     height: 100vh;
   `;
+  */
 
   const ImageBottom = styled.div`
     display: flex;
   `;
   return (
-    <Landingpage>
-      <img
-        src={carTop}
-        alt="car"
-        style={{ position: 'fixed', top: '0px', width: '10%' }}
-      />
-      <h1
-        style={{
-          color: 'white',
-          marginTop: '19%',
-          marginLeft: '35%',
-          position: 'absolute'
-        }}
-      >
-        Making parking at Middlebury easier!
-      </h1>
-      <img
-        src={logoLanding}
-        alt="logo"
-        style={{
-          width: '25%',
-          height: '45%',
-          marginLeft: '40%',
-          marginTop: '2%'
-        }}
-      />
-
-      <Wrapper>
-        <Form
-          userType={props.userType}
-          setUser={props.setUser}
-          timeIn={props.timeIn}
-          setTimeIn={props.setTimeIn}
-          timeOut={props.timeOut}
-          setTimeOut={props.setTimeOut}
-          landing={props.landing}
-          update={props.update}
-          mobileOpen={props.mobileOpen}
-          setMobileOpen={props.setMobileOpen}
+    <React.Fragment>
+      <CssBaseline />
+      <Container fixed>
+        <Typography
+          component="div"
+          style={{ backgroundColor: '#5e1a54', height: '100vh' }}
         />
-        <button
+        <img
+          src={carTop}
+          alt="car"
+          style={{ position: 'fixed', top: '0px', width: '10%' }}
+        />
+        <h1
           style={{
-            borderRadius: '5px',
-            background: 'orange',
             color: 'white',
-            height: '30px',
-            width: '150px',
-            marginLeft: '45%',
-            marginTop: '2%'
-          }}
-          onClick={() => {
-            props.changeLandingPage(false);
+            marginTop: '19%',
+            marginLeft: '35%',
+            position: 'absolute'
           }}
         >
-          Search
-        </button>
-      </Wrapper>
-      <ImageBottom>
+          Making parking at Middlebury easier!
+        </h1>
         <img
-          src={carLeft}
-          alt="car"
-          style={{ position: 'fixed', bottom: '0px', width: '13%' }}
-        />
-        <img
-          src={carRight}
-          alt="car"
+          src={logoLanding}
+          alt="logo"
           style={{
-            position: 'fixed',
-            bottom: '0px',
-            right: '0px',
-            width: '20%'
+            width: '25%',
+            height: '45%',
+            marginLeft: '40%',
+            marginTop: '2%'
           }}
         />
-        <img
-          src={carMiddle}
-          alt="car"
-          style={{
-            position: 'fixed',
-            bottom: '0px',
-            left: '45%',
-            width: '15%'
-          }}
-        />
-      </ImageBottom>
-    </Landingpage>
+
+        <Wrapper>
+          <Form
+            userType={props.userType}
+            setUser={props.setUser}
+            timeIn={props.timeIn}
+            setTimeIn={props.setTimeIn}
+            timeOut={props.timeOut}
+            setTimeOut={props.setTimeOut}
+            landing={props.landing}
+            update={props.update}
+            mobileOpen={props.mobileOpen}
+            setMobileOpen={props.setMobileOpen}
+          />
+          <button
+            style={{
+              borderRadius: '5px',
+              background: 'orange',
+              color: 'white',
+              height: '30px',
+              width: '150px',
+              marginLeft: '45%',
+              marginTop: '2%'
+            }}
+            onClick={() => {
+              props.changeLandingPage(false);
+            }}
+          >
+            Search
+          </button>
+        </Wrapper>
+        <ImageBottom>
+          <img
+            src={carLeft}
+            alt="car"
+            style={{ position: 'fixed', bottom: '0px', width: '13%' }}
+          />
+          <img
+            src={carRight}
+            alt="car"
+            style={{
+              position: 'fixed',
+              bottom: '0px',
+              right: '0px',
+              width: '20%'
+            }}
+          />
+          <img
+            src={carMiddle}
+            alt="car"
+            style={{
+              position: 'fixed',
+              bottom: '0px',
+              left: '45%',
+              width: '15%'
+            }}
+          />
+        </ImageBottom>
+      </Container>
+    </React.Fragment>
   );
 };
 
